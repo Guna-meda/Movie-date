@@ -6,7 +6,7 @@ import Submitted from './components/Submitted'
 
 const App = () => {
   return (
-    <Router  basename="/movie-date">
+    <Router  basename="/Movie-date">
       <Routes>
         <Route path='/' element= {<Landing/>} />
         <Route path='/Movie' element= {<Movie/>} />
