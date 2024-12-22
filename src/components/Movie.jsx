@@ -9,9 +9,9 @@ const Movie = () => {
   const [explain, setExplain] = useState("");
   const [error, setError] = useState("");
 
-  const serviceId = "service_4l29dbr";
-  const templateId = "template_z7h4igi";
-  const publicKey = "n4ujIUIPuO0ayrSQh";
+  // const serviceId = "service_4l29dbr";
+  // const templateId = "template_z7h4igi";
+  // const publicKey = "n4ujIUIPuO0ayrSQh";
 
   const ListMovies = ["Amaran", "Sanam teri Kasam", "Fifty shades of Grey"];
 
@@ -56,10 +56,10 @@ const Movie = () => {
       };
 
       const result = await emailjs.send(
-        serviceId,
-        templateId,
+        import.meta.env.VITE_REACT_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATE_ID,
         templateParams,
-        publicKey
+        import.meta.env.VITE_REACT_APP_EMAILJS_PUBLIC_KEY,
       );
 
       console.log("Email sent successfully", result);
